@@ -1735,8 +1735,8 @@ class ff_player_event {
 public:
     virtual void player_pause() {};
     virtual void player_start() {};
-    virtual void player_next(const char*next_file = "/home/muze/下载/4.mp4") {};
-    virtual void player_last(const char*last_file = "/home/muze/下载/剑网3·侠肝义胆沈剑心-01.mp4") {};
+    virtual void player_next(const char*next_file = "next.mp4") {};
+    virtual void player_last(const char*last_file = "last.mp4") {};
     virtual void player_slide(int) {};
     virtual void slider_release() {};
     virtual void player_resize() {};
@@ -2717,8 +2717,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     error_handler::create_error_handler();
-    std::cout << std::this_thread::get_id() << std::endl;
-    ff_player player(app, "/home/muze/下载/X战警：天启.BD1280高清中英双字版.mp4");
+    ff_player player(app, "file_you_want_to_play.mp4");
     player.play();
     return app.exec();
 }
