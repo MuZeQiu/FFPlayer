@@ -46,7 +46,6 @@ extern "C" {
 #include <mp4v2/mp4v2.h>
 
 #define Enable_Stack_Trace
-//#define Test_Audio
 
 static constexpr enum AVSampleFormat ff_decode_deafult_out_sample_format = AV_SAMPLE_FMT_S16;
 static constexpr AVPixelFormat ff_decode_default_output_pixel_format = AV_PIX_FMT_RGB24;
@@ -1355,18 +1354,6 @@ private:
                 handle_error();
                 return NULL;
             }
-#ifdef Test_Audio
-            static bool is_open = false;
-            if (!is_open) {
-                is_open = true;
-                fs_.open("/home/muze/文档/qtpro/file1.pcm", std::ios_base::out|std::ios_base::binary|std::ios_base::trunc);
-                if (fs_.is_open()) {
-                    //assert(false);
-                }
-            }
-            fs_.write((const char*)dest_audio_frame_buf_, out_buffer_size);
-            fs_.flush();
-#endif
             frame_size = out_buffer_size;
             int16_t *dest_audio_frame_buf = (int16_t*)dest_audio_frame_buf_;
             return dest_audio_frame_buf;
@@ -1528,9 +1515,6 @@ private:
     unsigned int video_fss_capacity_;
     ff_safe_stream<int16_t> audio_fss_;
     ff_safe_stream<uint8_t> video_fss_;
-#ifdef Test_Audio
-    std::fstream fs_;
-#endif
 };
 
 class ff_asyn_decoder: public ff_decoder_base {
