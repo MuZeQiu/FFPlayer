@@ -18,7 +18,7 @@ FFPlayer拥有以下功能:
 FFMpeg(http://ffmpeg.org),
 libmp4v2(https://github.com/Thinkerfans/lib-mp4v2),
 Boost(https://www.boost.org),
-OpebCV(https://opencv.org),
+OpenCV(https://opencv.org),
 PortAudio(http://www.portaudio.com),
 Qt(https://www.qt.io).
 
