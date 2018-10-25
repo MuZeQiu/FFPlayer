@@ -1,3 +1,6 @@
+
+![](https://github.com/MuZeQiu/FFPlayer/blob/master/FullSizeRender.jpg)
+
 欢迎使用FFPlayer.
 
 FFPlayer是一个支持Mac, Windows和Linux的桌面MP4播放器.
