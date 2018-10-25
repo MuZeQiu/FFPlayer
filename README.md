@@ -1,9 +1,7 @@
 
 ![](https://github.com/MuZeQiu/FFPlayer/blob/master/FullSizeRender.jpg)
 
-<br>欢迎使用FFPlayer.
-
-<br>FFPlayer是一个支持Mac, Windows和Linux的桌面MP4播放器.
+#### FFPlayer是一个支持Mac, Windows和Linux的桌面MP4播放器
 
 #### FFPlayer拥有以下功能:
 * 暂停(点击Pause按钮或者双击视频画面)
@@ -28,4 +26,3 @@
 #### 使用注意:
 在实现Last或Next按钮的功能之前, 需要您自定义应用程序的视频目录并在使用该功能时给定相应的视频.
 
-本项目会持续更新...
